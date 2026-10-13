@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Portfolio</title>
+
+    <style>
+        :root {
+            --pink-1: #f7d5e6;
+            --pink-2: #f4b6d8;
+            --pink-3: #d96ea8;
+            --pink-4: #b95280;
+            --gray-1: #f3f3f5;
+            --gray-2: #e2e2e7;
+            --gray-3: #7a7a83;
+            --gray-4: #3d3d45;
+            --white: #ffffff;
+            --shadow: rgba(88, 53, 72, 0.18);
+        }
+
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background: linear-gradient(135deg, var(--gray-1) 0%, var(--pink-1) 100%);
+            color: var(--gray-4);
+        }
+
+        header {
+            background: linear-gradient(135deg, #3d3d45 0%, #7a7a83 35%, #d96ea8 100%);
+            color: white;
+            text-align: center;
+            padding: 30px 20px;
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+        }
+
+        header h1 {
+            margin: 0;
+            letter-spacing: 1px;
+            animation: fadeUp 0.8s ease;
+        }
+
+        header p {
+            margin-top: 10px;
+            animation: fadeUp 1s ease;
+        }
+
+        nav {
+            background: rgba(255, 255, 255, 0.7);
+            backdrop-filter: blur(8px);
+            text-align: center;
+            padding: 16px;
+            border-bottom: 1px solid rgba(157, 112, 136, 0.18);
+            position: sticky;
+            top: 0;
+            z-index: 10;
+        }
+
+        nav a {
+            color: var(--gray-4);
+            text-decoration: none;
+            margin: 15px;
+            padding: 8px 12px;
+            border-radius: 20px;
+            transition: all 0.3s ease;
+            font-weight: bold;
+        }
+
+        nav a:hover {
+            background: linear-gradient(135deg, var(--pink-2), var(--pink-1));
+            color: var(--gray-4);
+            transform: translateY(-2px);
+            box-shadow: 0 6px 14px rgba(201, 108, 156, 0.18);
+        }
+
+        section {
+            background: rgba(255, 255, 255, 0.8);
+            margin: 20px auto;
+            padding: 25px;
+            max-width: 800px;
+            border-radius: 18px;
+            box-shadow: 0 12px 30px var(--shadow);
+            border: 1px solid rgba(214, 160, 187, 0.26);
+            animation: fadeUp 0.9s ease both;
+        }
+
+        h2 {
+            color: var(--pink-4);
+            margin-top: 0;
+        }
+
+        .home-header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 20px;
+        }
+
+        .profile-image {
+            width: 160px;
+            height: 160px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 4px solid var(--pink-2);
+            box-shadow: 0 8px 18px rgba(181, 82, 128, 0.28);
+            animation: float 4s ease-in-out infinite;
+            transition: transform 0.3s ease;
+        }
+
+        .profile-image:hover {
+            transform: scale(1.05) rotate(2deg);
+        }
+
+        .education-header {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            margin-bottom: 10px;
+        }
+
+        .edu-logo {
+            width: 70px;
+            height: 70px;
+            object-fit: contain;
+            border-radius: 14px;
+            background: linear-gradient(135deg, var(--gray-1), var(--pink-1));
+            padding: 8px;
+            box-shadow: 0 6px 14px rgba(0, 0, 0, 0.08);
+            transition: transform 0.3s ease;
+        }
+
+        .edu-logo:hover {
+            transform: rotate(-6deg) scale(1.05);
+        }
+
+        .project {
+            background: linear-gradient(135deg, #fdf2f8 0%, #f0f1f5 100%);
+            padding: 18px 20px;
+            margin: 15px 0;
+            border-radius: 12px;
+            border-left: 5px solid var(--pink-3);
+            transition: transform 0.25s ease, box-shadow 0.25s ease;
+        }
+
+        .project:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 12px 20px rgba(157, 120, 137, 0.18);
+        }
+
+        footer {
+            background: linear-gradient(135deg, #3d3d45 0%, #5d5d64 100%);
+            color: white;
+            text-align: center;
+            padding: 18px;
+            margin-top: 30px;
+        }
+
+        @keyframes fadeUp {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes float {
+            0%, 100% {
+                transform: translateY(0px);
+            }
+            50% {
+                transform: translateY(-8px);
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <h1>My Portfolio</h1>
+        <p>Welcome to my personal website!</p>
+    </header>
+
+    <nav>
+        <a href="#home">Home</a>
+        <a href="#education">Education</a>
+        <a href="#projects">Projects</a>
+    </nav>
+
+    <section id="home">
+        <h2>Home</h2>
+        <div class="home-header">
+            <div>
+                <h3>Hello! I'm Your CHEYENNE</h3>
+                <p>
+                    I am a student who is interested in technology,
+                    programming, and web development.
+                </p>
+            </div>
+            <img src="profile.jpe" alt="Profile Picture" class="profile-image">
+        </div>
+    </section>
+
+    <section id="education">
+        <h2>Education</h2>
+        <div class="education-header">
+            <img src="cite-logo.webp" alt="CITE Logo" class="edu-logo">
+            <h3>Nueva Vizcaya State University</h3>
+        </div>
+        <p>Course: Bachelor of Science in Information Technology</p>
+        <p>Year Level: 3rd Year</p>
+    </section>
+
+    <section id="projects">
+        <h2>My Projects</h2>
+
+        <div class="project">
+            <h3>Project 1: BMI Calculator</h3>
+            <p><strong>Phase:</strong> Completed</p>
+            <p><strong>Tech Stack:</strong> MIT App Inventor</p>
+        </div>
+
+        <div class="project">
+            <h3>Project 2: Web-Based Enrollment System</h3>
+            <p><strong>Phase:</strong> Development</p>
+            <p><strong>Tech Stack:</strong> HTML, CSS, PHP, MySQL</p>
+        </div>
+
+            <p><strong>Tech Stack:</strong> HTML, CSS, GitHub</p>
+        </div>
+    </section>
+
+    <footer>
+        <p>© 2026 My Portfolio | All Rights Reserved</p>
+    </footer>
+
+</body>
+</html>
